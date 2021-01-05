@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-compatible" content="ie=edge">
+	<title>Signup Form</title>
+	</head>
+	<body>
+		<!--Signup Form-->
+		<form action="http://www.example.com/login.php" method="GET"><!--GET Method is not secure and should not use for sensetive information. POST method is secure and can be used for sensetive information -->
+			<fieldset><!-- fieldset element is used to group the specific part of the form.Element which are inside the group will show seperately-->
+				<legend>Personal Details</legend><!--To tell the purpose of making the group we write caption. for caption we use legend tag--> 
+				<p>
+					First Name:
+					<input type="text" name="firstname" size="15" maxlength="30" required/><!--Name attribute is used for surver. size attribute is for size of the text box and maxlength is number of character intext box.required attribute is used for form validation. If any field is necessary to get. we use required attribute for that. -->
+					Last Name:
+					<input type="text" name="Lastname" size="15" maxlength="30"/>
+				</p>
+				<p>
+					Gender:
+					<input id="male" type="radio" name="gender" value="m"/><!--To get the proper behaviour of radio button the name value should be same. If we want one field should be selected already, we can write checked attribute.Checked  .Data goes to surver in name & value pair that is why we use value attribute.-->
+					<label for="male"> Male</label><!--for Attribute is used to tell this label is for wich id.id name & for value should be the same.--> 
+					<label><input type="radio" name="gender" value="f"/> Famale</label> <!--We use lable tag to group text and button so that anyone can easily use it. This is one way of labling--> 
+				</p>
+				<p>
+					Date of Birth:
+					<input type="date" name="dob"/>
+				</p>
+				<p>
+					Please enter your email address:
+					<br/>
+					<input type="email" name="email"/>
+				</p>
+				<p>
+					Nationality:
+					<SELECT  name="Countries" multiple><!--To select multipule options ,we use multiple attribute-->
+						<option value="Pakistan">Pakistan</option>
+						<option value="USA" >USA </option>
+						<option value="Canada"> Canada</option>
+						<option  value="England">England</option>
+						<option value="China">China</option>
+					</SELECT>
+				</p>
+			</fieldset>
+			<p>
+				Passward:
+				<input type="Passward" name="Passward" size="15" maxlength="30">
+			</p>
+			<p>
+				Re_enter Password:
+				<input type="Password" name="Password" size="15" maxlength="30">
+			</p>
+			<p>
+				Interests:
+				<input type="checkbox" name="Interests" value="men"/>Men's clothing
+				<input type="checkbox" name="Interests" value="Women"/>Women's clothing
+				<input type="checkbox" name="Interests" value="acc"/>Accessories
+				<input type="Checkbox" name="Interests" value="elec"/>Electronics
+			</p>
+			<p>
+				Comments:
+			</p>
+			<textarea name="Comments" rows="4" cols="30"> Enter your comments ....</textarea><!--rows element is used to control the height of box and cols is for width.-->
+		</p>
+		<p>
+			UPload Profile Picture:
+		</p>
+		<input type="file" name="dp"/><!--display picture in this input tag -->
+		<br/>
+		<br/>
+		<input type="Submit" value="UPload"/>
+		<input type="Submit"/>
+		<br/>
+		<br/>
+		<input type="Image" src="../Images/Submit.png" width="150">
+	</form>
+</body>
+</html>
